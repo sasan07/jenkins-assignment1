@@ -3,7 +3,7 @@ pipeline {
   
     stages {
         
-        stage('Trigger test job')
+        stage('Trigger test job') {
             steps {
                 build job: 'Push-to-test'
             }
@@ -12,9 +12,10 @@ pipeline {
     stages {
 
 
-        stage('Trigger prod job')
+        stage('Trigger prod job') {
             steps {
                 build job: 'Pust-to-prod'
             }
         }
    }
+}
