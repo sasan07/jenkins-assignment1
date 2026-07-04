@@ -17,5 +17,4 @@ pipeline {
                 build job: 'Pust-to-prod'
             }
         }
-     }
-}
+   }
