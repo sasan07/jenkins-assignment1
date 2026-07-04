@@ -1,21 +1,18 @@
 pipeline {
     agent any
-  
-    stages {
-        
-        stage('Trigger test job') {
-            steps {
-                build job: 'Push-to-test'
-            }
 
-        }
     stages {
 
-
-        stage('Trigger prod job') {
+        stage('Trigger Test Job') {
             steps {
-                build job: 'Pust-to-prod'
+                build job: 'Push-to-Test'
             }
         }
-   }
-}
+
+        stage('Trigger Prod Job') {
+            steps {
+                build job: 'Push-to-Prod'
+            }
+        }
+    }
+}    
